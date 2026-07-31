@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exportedAt": "2026-07-31T19:34:18.224Z",
+  "exportedAt": "2026-07-31T21:24:15.947Z",
   "profile": {
     "name": "Maren Bräckow",
     "role": "Game Engineering · 8. Semester",
@@ -9,11 +9,11 @@
     "initials": "MB",
     "photoUrl": "",
     "email": "maren.braeckow@web.de",
-    "itch": "",
+    "itch": "https://kynexe.itch.io",
     "linkedin": ""
   },
-  "about": "Hi! Ich bin Maren Bräckow, Studentin im Studiengang Game Engineering im 8. Semester an der Hochschule Kempten. Mein Schwerpunkt liegt auf Sound und Musik. Ich komponiere, mache Sounddesign und arbeite an der Audio-Umsetzung in Spielen. Genauso gern programmiere und gestalte ich, von Gameplay über Level bis zur Interaktion.\n\nAuf dieser Seite sammle ich meine persönlichen Projekte. Dazu gehören Gameplay-Videos, Audio-Arbeiten und spielbare Prototypen auf itch.io. Manche entstehen im Studium, andere in meiner Freizeit. Aktuell schreibe ich meine Bachelorarbeit über barrierefreies Game Design. Mein aktuelles Projekt ist das Spiel Maze of Sense, welches ich im Rahmen meiner Bachelorarbeit erstelle.",
-  "about_en": "Hi! I'm Maren Bräckow, a Game Engineering student in my 8th semester at Kempten University of Applied Sciences. My focus is on sound and music. I compose, do sound design and work on the audio implementation in games. I also love programming and design, from gameplay to levels and interaction.\n\nOn this page I collect my personal projects. These include gameplay videos, audio work and playable prototypes on itch.io. Some are created during my studies, others in my free time. I'm currently writing my bachelor's thesis about accessible game design. My current project is the game Maze of Sense, which I'm creating as part of my bachelor's thesis.",
+  "about": "Hi! Ich bin Maren Bräckow, Studentin im Studiengang Game Engineering im 8. Semester an der Hochschule Kempten. Mein Schwerpunkt liegt auf Sound und Musik. Ich komponiere, mache Sounddesign und arbeite an der Audio-Umsetzung in Spielen. Genauso gern programmiere und gestalte ich, von Gameplay über Level bis zur Interaktion.\n\nAuf dieser Seite sammle ich meine persönlichen Projekte. Dazu gehören Gameplay-Videos, Audio-Arbeiten und spielbare Prototypen auf itch.io. Manche entstehen im Studium, andere in meiner Freizeit. Mein aktuelles Projekt ist das Spiel Maze of Sense, welches ich im Rahmen meiner Bachelorarbeit erstelle.",
+  "about_en": "Hi! I'm Maren Bräckow, a Game Engineering student in my 8th semester at Kempten University of Applied Sciences. My focus is on sound and music. I compose, do sound design and work on the audio implementation in games. I also love programming and design, from gameplay to levels and interaction.\n\nOn this page I collect my personal projects. These include gameplay videos, audio work and playable prototypes on itch.io. Some are created during my studies, others in my free time. My current project is the game Maze of Sense, which I'm creating as part of my bachelor's thesis.",
   "projects": [
     {
       "id": "p-video-1",
