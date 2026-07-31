@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio · Game Engineering</title>
+  <meta name="description" content="Portfolio persönlicher Spielprojekte mit Videos, Audio und spielbaren Prototypen." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c5cff'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='%230d0f16' font-family='Arial' font-weight='900'>P</text></svg>" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <span class="logo" id="navLogo">P</span>
+        <span id="navName">Portfolio</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about" data-i18n="nav.about">Über mich</a>
+        <a href="#projekte" data-i18n="nav.projects">Projekte</a>
+        <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+        <button class="btn btn-ghost btn-sm" id="langToggle" title="Sprache / Language">🌐 EN</button>
+        <a class="btn btn-ghost btn-sm admin-only" href="admin.html" title="Projekte verwalten" data-i18n="nav.admin">⚙️ Admin</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow" data-i18n="hero.eyebrow">🎮 Game Engineering · 8. Semester</span>
+        <h1><span data-i18n="hero.im">Hi, ich bin </span><span class="grad" id="heroName">Maren</span>.<br><span data-i18n="hero.role1">Spieleentwicklerin aus </span><span class="grad" data-i18n="hero.role2">Leidenschaft</span>.</h1>
+        <p class="lead" id="heroTagline"></p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projekte" data-i18n="hero.cta1">Projekte ansehen</a>
+          <a class="btn" href="#kontakt" data-i18n="hero.cta2">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <span class="initials" id="heroInitials">MB</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- Über mich -->
+    <section id="about">
+      <div class="section-head">
+        <div class="kicker" data-i18n="about.kicker">Über mich</div>
+        <h2 data-i18n="about.title">Wer steckt dahinter?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo" id="aboutPhoto"></div>
+        <div class="about-text">
+          <div id="aboutText"><!-- wird per JS gefüllt --></div>
+          <div class="chips">
+            <span class="chip">Unity 6</span>
+            <span class="chip">Wwise Audio</span>
+            <span class="chip">C#</span>
+            <span class="chip">Game Accessibility</span>
+            <span class="chip">Sound Design</span>
+            <span class="chip">Level Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projekte">
+      <div class="section-head">
+        <div class="kicker" data-i18n="projects.kicker">Portfolio</div>
+        <h2 data-i18n="projects.title">Meine Projekte</h2>
+        <p data-i18n="projects.sub">Eine Auswahl meiner Arbeiten mit Videos, Audio-Clips und spielbaren Prototypen auf itch.io.</p>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="all" data-i18n="filter.all">Alle</button>
+        <button class="filter" data-filter="video" data-i18n="filter.video">🎬 Videos</button>
+        <button class="filter" data-filter="audio" data-i18n="filter.audio">🎧 Audio</button>
+        <button class="filter" data-filter="link" data-i18n="filter.link">🕹️ Spiele</button>
+      </div>
+
+      <div class="projects" id="projectGrid"><!-- wird per JS gefüllt --></div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt">
+      <div class="contact-card">
+        <div class="kicker" style="color:var(--accent-2)" data-i18n="contact.kicker">Kontakt</div>
+        <h2 data-i18n="contact.title">Lass uns in Kontakt bleiben</h2>
+        <p data-i18n="contact.sub">Du hast Fragen zu einem Projekt oder möchtest zusammenarbeiten? Ich freue mich über deine Nachricht.</p>
+        <div class="social" id="socialLinks"><!-- wird per JS gefüllt --></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> <span id="footerName">Portfolio</span> · Game Engineering</span>
+      <span><span data-i18n="footer.made">Erstellt mit ♥</span><span class="admin-only"> · <a href="admin.html" data-i18n="footer.adminLink">Admin-Bereich</a></span></span>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

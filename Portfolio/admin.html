@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin · Portfolio verwalten</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c5cff'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='%230d0f16' font-family='Arial' font-weight='900'>P</text></svg>" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html">
+        <span class="logo">P</span>
+        <span>Admin-Bereich</span>
+      </a>
+      <div class="nav-links">
+        <a class="btn btn-ghost btn-sm" href="index.html">← Zur Seite</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap admin-shell">
+
+    <div class="admin-head">
+      <h1>⚙️ Projekte verwalten</h1>
+      <div class="spacer"></div>
+      <button class="btn" id="exportBtn">⬇️ Exportieren</button>
+      <button class="btn" id="importBtn">⬆️ Importieren</button>
+      <input type="file" id="importFile" accept="application/json" hidden />
+    </div>
+
+    <div class="note">
+      <strong>So funktioniert's.</strong> Alle Änderungen werden <strong>nur in diesem Browser</strong> gespeichert.
+      Damit deine Besucher die Änderungen sehen, klicke auf <strong>„Exportieren"</strong>, lade die Datei
+      <code>portfolio-data.json</code> herunter und lege sie neben die Website.
+      Auf einem anderen Gerät kannst du sie über <strong>„Importieren"</strong> wieder einlesen.
+    </div>
+
+    <!-- Profil & Über mich -->
+    <div class="panel" style="margin-bottom:24px">
+      <h2>👤 Profil & Über mich</h2>
+      <p class="sub">Name, Vorstellungstext und Kontaktdaten für die Startseite.</p>
+      <div class="admin-cols" style="grid-template-columns:1fr 1fr">
+        <div>
+          <div class="form-group">
+            <label class="lbl" for="pfName">Name</label>
+            <input type="text" id="pfName" placeholder="Vor- und Nachname" />
+          </div>
+          <div class="form-group">
+            <label class="lbl" for="pfInitials">Initialen <span class="opt">(fürs Logo)</span></label>
+            <input type="text" id="pfInitials" maxlength="2" placeholder="z. B. MB" />
+          </div>
+          <div class="form-group">
+            <label class="lbl" for="pfTagline">Kurzer Slogan <span class="opt">(Hero-Bereich)</span></label>
+            <textarea id="pfTagline" placeholder="Ein Satz über dich..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="lbl" for="pfTaglineEn">🇬🇧 Slogan (Englisch) <span class="opt">(optional)</span></label>
+            <textarea id="pfTaglineEn" placeholder="One sentence about you..."></textarea>
+            <div class="hint">Leer = auf der englischen Seite wird der deutsche Slogan gezeigt.</div>
+          </div>
+          <div class="form-group">
+            <label class="lbl" for="pfPhoto">Foto-URL <span class="opt">(optional)</span></label>
+            <input type="url" id="pfPhoto" placeholder="https://... oder leer lassen" />
+            <div class="file-row" style="margin-top:8px">
+              <input type="file" id="pfPhotoFile" accept="image/*" />
+            </div>
+            <div class="hint">Kleine Bilder (&lt; 1 MB) verwenden. Große Uploads sprengen den Browser-Speicher.</div>
+          </div>
+        </div>
+        <div>
+          <div class="form-group">
+            <label class="lbl" for="pfAbout">„Über mich"-Text</label>
+            <textarea id="pfAbout" style="min-height:150px" placeholder="Erzähle etwas über dich, dein Studium und deine Projekte..."></textarea>
+            <div class="hint">Leere Zeile = neuer Absatz.</div>
+          </div>
+          <div class="form-group">
+            <label class="lbl" for="pfAboutEn">🇬🇧 „Über mich" (Englisch) <span class="opt">(optional)</span></label>
+            <textarea id="pfAboutEn" style="min-height:150px" placeholder="Tell something about yourself, your studies and your projects..."></textarea>
+            <div class="hint">Leer = deutscher Text wird auf der englischen Seite gezeigt.</div>
+          </div>
+          <div class="form-group">
+            <label class="lbl" for="pfEmail">E-Mail</label>
+            <input type="text" id="pfEmail" placeholder="name@mail.de" />
+          </div>
+          <div class="form-group">
+            <label class="lbl" for="pfItch">itch.io-Profil <span class="opt">(optional)</span></label>
+            <input type="url" id="pfItch" placeholder="https://deinname.itch.io" />
+          </div>
+          <div class="form-group">
+            <label class="lbl" for="pfLinkedin">LinkedIn <span class="opt">(optional)</span></label>
+            <input type="url" id="pfLinkedin" placeholder="https://linkedin.com/in/..." />
+          </div>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary" id="saveProfileBtn">Profil speichern</button>
+      </div>
+    </div>
+
+    <!-- Projekte -->
+    <div class="admin-cols">
+
+      <!-- Formular -->
+      <div class="panel">
+        <h2 id="formTitle">➕ Neues Projekt</h2>
+        <p class="sub">Video, Audio und Links, optional kombinierbar.</p>
+
+        <input type="hidden" id="editId" />
+
+        <div class="form-group">
+          <label class="lbl" for="fTitle">Titel</label>
+          <input type="text" id="fTitle" placeholder="Projektname" />
+        </div>
+
+        <div class="form-group">
+          <label class="lbl" for="fTitleEn">🇬🇧 Titel (Englisch) <span class="opt">(optional)</span></label>
+          <input type="text" id="fTitleEn" placeholder="Project name" />
+        </div>
+
+        <div class="form-group">
+          <label class="lbl" for="fKind">Kategorie <span class="opt">(für Filter & Badge)</span></label>
+          <select id="fKind">
+            <option value="video">🎬 Video</option>
+            <option value="audio">🎧 Audio</option>
+            <option value="link">🕹️ Spiel / Link</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="lbl" for="fDesc">Beschreibung</label>
+          <textarea id="fDesc" placeholder="Worum geht es in diesem Projekt?"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="lbl" for="fDescEn">🇬🇧 Beschreibung (Englisch) <span class="opt">(optional)</span></label>
+          <textarea id="fDescEn" placeholder="What is this project about?"></textarea>
+          <div class="hint">Leer = deutsche Beschreibung wird auf Englisch gezeigt.</div>
+        </div>
+
+        <div class="form-group">
+          <label class="lbl" for="fVideo">Video-URL <span class="opt">(optional)</span></label>
+          <input type="url" id="fVideo" placeholder="YouTube, Vimeo oder .mp4-Link" />
+          <div class="hint">YouTube/Vimeo werden automatisch eingebettet. Direkte .mp4-Links funktionieren ebenfalls.</div>
+        </div>
+
+        <div class="form-group">
+          <label class="lbl" for="fAudio">Audio <span class="opt">(optional)</span></label>
+          <input type="url" id="fAudio" placeholder="Audio-URL (.mp3, .wav ...)" />
+          <div class="file-row" style="margin-top:8px">
+            <input type="file" id="fAudioFile" accept="audio/*" />
+          </div>
+          <div class="hint">Datei hochladen <em>oder</em> URL eintragen. Kleine Dateien (&lt; 2 MB) empfohlen.</div>
+        </div>
+
+        <div class="form-group">
+          <label class="lbl">Links <span class="opt">(z. B. itch.io, erscheinen unter dem Video)</span></label>
+          <div id="linkRows"></div>
+          <button class="btn btn-sm btn-ghost" id="addLinkBtn" type="button" style="margin-top:6px">+ Link hinzufügen</button>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" id="saveProjectBtn">Projekt speichern</button>
+          <button class="btn btn-ghost" id="cancelEditBtn" hidden>Abbrechen</button>
+        </div>
+      </div>
+
+      <!-- Liste -->
+      <div>
+        <div class="panel">
+          <h2>📁 Vorhandene Projekte (<span id="count">0</span>)</h2>
+          <p class="sub">Reihenfolge per Pfeil ändern, bearbeiten oder löschen.</p>
+          <div class="admin-list" id="adminList"></div>
+        </div>
+        <div style="margin-top:16px; text-align:right">
+          <button class="btn btn-danger btn-sm" id="resetBtn">Alles auf Standard zurücksetzen</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
