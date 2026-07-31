@@ -35,7 +35,7 @@ const DEFAULT_PROFILE = {
 };
 
 const DEFAULT_ABOUT =
-  'Hi! Ich bin Studentin im Studiengang Game Engineering im 8. Semester ' +
+  'Hi! Ich bin Maren Bräckow, Studentin im Studiengang Game Engineering im 8. Semester ' +
   'an der Hochschule Kempten. ' +
   'Mein Schwerpunkt liegt auf Sound und Musik. Ich komponiere, mache Sounddesign ' +
   'und arbeite an der Audio-Umsetzung in Spielen. Genauso gern programmiere und ' +
@@ -47,7 +47,7 @@ const DEFAULT_ABOUT =
   'welches ich im Rahmen meiner Bachelorarbeit erstelle.';
 
 const DEFAULT_ABOUT_EN =
-  'Hi! I\'m a Game Engineering student in my 8th semester ' +
+  'Hi! I\'m Maren Bräckow, a Game Engineering student in my 8th semester ' +
   'at Kempten University of Applied Sciences. ' +
   'My focus is on sound and music. I compose, do sound design and work on ' +
   'the audio implementation in games. I also love programming and design, ' +
