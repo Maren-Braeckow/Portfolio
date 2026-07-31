@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "exportedAt": "2026-07-31T19:34:18.224Z",
+  "profile": {
+    "name": "Maren Bräckow",
+    "role": "Game Engineering · 8. Semester",
+    "tagline": "Mein Schwerpunkt liegt auf Sound und Musik, ich programmiere und gestalte aber genauso gern. Hier sammle ich meine persönlichen Projekte, von kleinen Experimenten bis zu größeren Produktionen.",
+    "tagline_en": "My focus is on sound and music, but I also love programming and design. Here I collect my personal projects, from small experiments to bigger productions.",
+    "initials": "MB",
+    "photoUrl": "",
+    "email": "maren.braeckow@web.de",
+    "itch": "",
+    "linkedin": ""
+  },
+  "about": "Hi! Ich bin Maren Bräckow, Studentin im Studiengang Game Engineering im 8. Semester an der Hochschule Kempten. Mein Schwerpunkt liegt auf Sound und Musik. Ich komponiere, mache Sounddesign und arbeite an der Audio-Umsetzung in Spielen. Genauso gern programmiere und gestalte ich, von Gameplay über Level bis zur Interaktion.\n\nAuf dieser Seite sammle ich meine persönlichen Projekte. Dazu gehören Gameplay-Videos, Audio-Arbeiten und spielbare Prototypen auf itch.io. Manche entstehen im Studium, andere in meiner Freizeit. Aktuell schreibe ich meine Bachelorarbeit über barrierefreies Game Design. Mein aktuelles Projekt ist das Spiel Maze of Sense, welches ich im Rahmen meiner Bachelorarbeit erstelle.",
+  "about_en": "Hi! I'm Maren Bräckow, a Game Engineering student in my 8th semester at Kempten University of Applied Sciences. My focus is on sound and music. I compose, do sound design and work on the audio implementation in games. I also love programming and design, from gameplay to levels and interaction.\n\nOn this page I collect my personal projects. These include gameplay videos, audio work and playable prototypes on itch.io. Some are created during my studies, others in my free time. I'm currently writing my bachelor's thesis about accessible game design. My current project is the game Maze of Sense, which I'm creating as part of my bachelor's thesis.",
+  "projects": [
+    {
+      "id": "p-video-1",
+      "title": "Projekt-Video 1 (Platzhalter)",
+      "title_en": "Project video 1 (placeholder)",
+      "description": "Kurze Beschreibung deines ersten Spielprojekts oder Trailers. Ersetze das Video im Admin-Bereich durch deinen eigenen Link (YouTube, Vimeo oder .mp4).",
+      "description_en": "Short description of your first game project or trailer. Replace the video in the admin area with your own link (YouTube, Vimeo or .mp4).",
+      "kind": "video",
+      "videoUrl": "",
+      "audioUrl": "",
+      "links": [
+        {
+          "label": "Auf itch.io spielen",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "p-video-2",
+      "title": "Projekt-Video 2 (Platzhalter)",
+      "title_en": "Project video 2 (placeholder)",
+      "description": "Zweites Video mit Beschreibung. Ideal für Gameplay-Ausschnitte oder Making-of-Material.",
+      "description_en": "Second video with description. Ideal for gameplay clips or making-of material.",
+      "kind": "video",
+      "videoUrl": "",
+      "audioUrl": "",
+      "links": []
+    },
+    {
+      "id": "p-video-3",
+      "title": "Projekt-Video 3 (Platzhalter)",
+      "title_en": "Project video 3 (placeholder)",
+      "description": "Drittes Video. Hier kannst du unter dem Video einen itch.io-Link platzieren.",
+      "description_en": "Third video. You can place an itch.io link below the video.",
+      "kind": "video",
+      "videoUrl": "",
+      "audioUrl": "",
+      "links": [
+        {
+          "label": "Zum Projekt",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "p-video-4",
+      "title": "Projekt-Video 4 (Platzhalter)",
+      "title_en": "Project video 4 (placeholder)",
+      "description": "Viertes Video, zum Beispiel eine Prototyp-Demo oder ein Devlog.",
+      "description_en": "Fourth video, for example a prototype demo or a devlog.",
+      "kind": "video",
+      "videoUrl": "",
+      "audioUrl": "",
+      "links": []
+    },
+    {
+      "id": "p-audio-1",
+      "title": "Audio-Clip 1 (Platzhalter)",
+      "title_en": "Audio clip 1 (placeholder)",
+      "description": "Ein Sound-Design- oder Musik-Beispiel. Lade im Admin-Bereich eine Audiodatei hoch oder verlinke eine URL.",
+      "description_en": "A sound design or music example. Upload an audio file in the admin area or link a URL.",
+      "kind": "audio",
+      "videoUrl": "",
+      "audioUrl": "",
+      "links": []
+    },
+    {
+      "id": "p-audio-2",
+      "title": "Audio-Clip 2 (Platzhalter)",
+      "title_en": "Audio clip 2 (placeholder)",
+      "description": "Zweites Audio-Beispiel, z. B. Voice-Over oder ein Ambient-Loop aus einem deiner Spiele.",
+      "description_en": "Second audio example, e.g. a voice-over or an ambient loop from one of your games.",
+      "kind": "audio",
+      "videoUrl": "",
+      "audioUrl": "",
+      "links": []
+    },
+    {
+      "id": "p-link-1",
+      "title": "itch.io Spiel 1 (Platzhalter)",
+      "title_en": "itch.io game 1 (placeholder)",
+      "description": "Ein spielbares Projekt auf itch.io. Trage im Admin-Bereich den Link ein.",
+      "description_en": "A playable project on itch.io. Add the link in the admin area.",
+      "kind": "link",
+      "videoUrl": "",
+      "audioUrl": "",
+      "links": [
+        {
+          "label": "Jetzt spielen",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "p-link-2",
+      "title": "itch.io Spiel 2 (Platzhalter)",
+      "title_en": "itch.io game 2 (placeholder)",
+      "description": "Zweites spielbares Projekt. Mehrere Links pro Projekt sind möglich.",
+      "description_en": "Second playable project. Multiple links per project are possible.",
+      "kind": "link",
+      "videoUrl": "",
+      "audioUrl": "",
+      "links": [
+        {
+          "label": "Jetzt spielen",
+          "url": ""
+        }
+      ]
+    }
+  ]
+}
