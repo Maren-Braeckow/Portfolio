@@ -43,7 +43,8 @@ const DEFAULT_ABOUT =
   'Auf dieser Seite sammle ich meine persönlichen Projekte. Dazu gehören Gameplay-Videos, ' +
   'Audio-Arbeiten und spielbare Prototypen auf itch.io. Manche entstehen im Studium, ' +
   'andere in meiner Freizeit. Aktuell schreibe ich meine Bachelorarbeit über ' +
-  'barrierefreies Game Design.';
+  'barrierefreies Game Design. Mein aktuelles Projekt ist das Spiel Maze of Sense, ' +
+  'welches ich im Rahmen meiner Bachelorarbeit erstelle.';
 
 const DEFAULT_ABOUT_EN =
   'Hi! I\'m a Game Engineering student in my 8th semester ' +
@@ -54,7 +55,8 @@ const DEFAULT_ABOUT_EN =
   'On this page I collect my personal projects. These include gameplay videos, ' +
   'audio work and playable prototypes on itch.io. Some are created during my studies, ' +
   'others in my free time. I\'m currently writing my bachelor\'s thesis about ' +
-  'accessible game design.';
+  'accessible game design. My current project is the game Maze of Sense, ' +
+  'which I\'m creating as part of my bachelor\'s thesis.';
 
 const DEFAULT_PROJECTS = [
   {
