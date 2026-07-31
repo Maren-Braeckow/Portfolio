@@ -35,23 +35,25 @@ const DEFAULT_PROFILE = {
 };
 
 const DEFAULT_ABOUT =
-  'Hi! Ich bin Studentin im Studiengang Game Engineering im 8. Semester. ' +
+  'Hi! Ich bin Studentin im Studiengang Game Engineering im 8. Semester ' +
+  'an der Hochschule Kempten. ' +
   'Mein Schwerpunkt liegt auf Sound und Musik. Ich komponiere, mache Sounddesign ' +
   'und arbeite an der Audio-Umsetzung in Spielen. Genauso gern programmiere und ' +
   'gestalte ich, von Gameplay über Level bis zur Interaktion.\n\n' +
   'Auf dieser Seite sammle ich meine persönlichen Projekte. Dazu gehören Gameplay-Videos, ' +
   'Audio-Arbeiten und spielbare Prototypen auf itch.io. Manche entstehen im Studium, ' +
-  'andere in meiner Freizeit. Ich arbeite an meiner Bachelorarbeit über ' +
+  'andere in meiner Freizeit. Aktuell schreibe ich meine Bachelorarbeit über ' +
   'barrierefreies Game Design.';
 
 const DEFAULT_ABOUT_EN =
-  'Hi! I\'m a Game Engineering student in my 8th semester. ' +
+  'Hi! I\'m a Game Engineering student in my 8th semester ' +
+  'at Kempten University of Applied Sciences. ' +
   'My focus is on sound and music. I compose, do sound design and work on ' +
   'the audio implementation in games. I also love programming and design, ' +
   'from gameplay to levels and interaction.\n\n' +
   'On this page I collect my personal projects. These include gameplay videos, ' +
   'audio work and playable prototypes on itch.io. Some are created during my studies, ' +
-  'others in my free time. I\'m working on my bachelor\'s thesis about ' +
+  'others in my free time. I\'m currently writing my bachelor\'s thesis about ' +
   'accessible game design.';
 
 const DEFAULT_PROJECTS = [
