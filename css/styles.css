@@ -1,23 +1,23 @@
 /* =========================================================
-   Portfolio – Modern Dark / Gaming Theme
+   Portfolio – Dark / Green / Minimal Theme
    ========================================================= */
 
 :root {
-  --bg:            #0d0f16;
-  --bg-2:          #141824;
-  --surface:       #1a1f2e;
-  --surface-2:     #212739;
-  --border:        #2b3348;
-  --text:          #e7ebf3;
-  --text-dim:      #9aa4bd;
-  --text-faint:    #6b7590;
-  --accent:        #7c5cff;   /* violett */
-  --accent-2:      #21d4c4;   /* türkis  */
-  --accent-warm:   #ff7a59;
+  --bg:            #0c100e;
+  --bg-2:          #121713;
+  --surface:       #161c18;
+  --surface-2:     #1c231e;
+  --border:        #283029;
+  --text:          #e8ede9;
+  --text-dim:      #9ba79f;
+  --text-faint:    #69756d;
+  --accent:        #3ad07d;   /* grün */
+  --accent-2:      #56dd93;   /* helleres grün, für Links */
+  --accent-ink:    #08110b;   /* Textfarbe auf grünem Grund */
   --danger:        #ff5470;
-  --ok:            #3ddc97;
-  --shadow:        0 12px 40px rgba(0,0,0,.45);
-  --radius:        16px;
+  --ok:            #3ad07d;
+  --shadow:        0 10px 30px rgba(0,0,0,.4);
+  --radius:        14px;
   --radius-sm:     10px;
   --maxw:          1120px;
   --font: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
@@ -31,10 +31,7 @@ body {
   margin: 0;
   font-family: var(--font);
   color: var(--text);
-  background:
-    radial-gradient(1100px 700px at 85% -10%, rgba(124,92,255,.18), transparent 60%),
-    radial-gradient(900px 600px at 0% 10%, rgba(33,212,196,.10), transparent 55%),
-    var(--bg);
+  background: var(--bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -50,7 +47,7 @@ img { max-width: 100%; display: block; }
 .nav {
   position: sticky; top: 0; z-index: 50;
   backdrop-filter: blur(12px);
-  background: rgba(13,15,22,.72);
+  background: rgba(12,16,14,.8);
   border-bottom: 1px solid var(--border);
 }
 .nav-inner {
@@ -66,8 +63,8 @@ img { max-width: 100%; display: block; }
 .brand .logo {
   width: 34px; height: 34px; border-radius: 9px;
   display: grid; place-items: center;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #0d0f16; font-weight: 900; font-size: 1rem;
+  background: var(--accent);
+  color: var(--accent-ink); font-weight: 900; font-size: 1rem;
 }
 .nav-links { display: flex; gap: 4px; margin-left: auto; align-items: center; }
 .nav-links a {
@@ -81,20 +78,20 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border); background: var(--surface);
   color: var(--text); padding: 9px 16px; border-radius: 10px;
   font-weight: 600; font-size: .92rem; cursor: pointer;
-  transition: transform .12s ease, background .15s ease, border-color .15s ease;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
   font-family: inherit;
 }
-.btn:hover { text-decoration: none; transform: translateY(-1px); border-color: var(--accent); }
+.btn:hover { text-decoration: none; border-color: var(--accent); }
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent), #6647ff);
-  border-color: transparent; color: #fff;
+  background: var(--accent);
+  border-color: transparent; color: var(--accent-ink);
 }
-.btn-primary:hover { box-shadow: 0 8px 24px rgba(124,92,255,.35); }
+.btn-primary:hover { background: var(--accent-2); border-color: transparent; }
 .btn-ghost { background: transparent; }
 .btn-danger { border-color: var(--danger); color: var(--danger); background: transparent; }
 .btn-danger:hover { background: rgba(255,84,112,.12); }
 .btn-sm { padding: 6px 11px; font-size: .82rem; }
-.btn:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
 
 /* ---------- Hero ---------- */
 .hero { padding: 80px 0 56px; }
@@ -103,7 +100,7 @@ img { max-width: 100%; display: block; }
 }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
-  color: var(--accent-2); font-weight: 600; font-size: .85rem;
+  color: var(--accent); font-weight: 600; font-size: .85rem;
   letter-spacing: 1.5px; text-transform: uppercase;
   padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px;
   background: var(--surface);
@@ -112,26 +109,19 @@ img { max-width: 100%; display: block; }
   font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.08; margin: 20px 0 14px;
   letter-spacing: -.5px;
 }
-.hero h1 .grad {
-  background: linear-gradient(120deg, var(--accent-2), var(--accent));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
+.hero h1 .grad { color: var(--accent); }
 .hero p.lead { font-size: 1.12rem; color: var(--text-dim); max-width: 46ch; }
 .hero-cta { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
 
 .hero-badge {
-  aspect-ratio: 1; border-radius: 24px; position: relative; overflow: hidden;
+  aspect-ratio: 1; border-radius: 20px; position: relative; overflow: hidden;
   border: 1px solid var(--border);
-  background:
-    radial-gradient(circle at 30% 20%, rgba(124,92,255,.35), transparent 55%),
-    radial-gradient(circle at 80% 80%, rgba(33,212,196,.30), transparent 55%),
-    var(--surface);
+  background: var(--surface);
   display: grid; place-items: center;
 }
 .hero-badge .initials {
   font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 900;
-  background: linear-gradient(135deg, #fff, var(--text-dim));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
+  color: var(--accent);
 }
 
 /* ---------- Sections ---------- */
@@ -168,18 +158,18 @@ section { padding: 56px 0; }
   font-weight: 600; font-size: .9rem; font-family: inherit; transition: all .15s ease;
 }
 .filter:hover { color: var(--text); border-color: var(--accent); }
-.filter.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.filter.active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
 /* ---------- Project grid ---------- */
 .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
 .card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   overflow: hidden; display: flex; flex-direction: column;
-  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+  transition: border-color .15s ease;
 }
-.card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: var(--shadow); }
+.card:hover { border-color: var(--accent); }
 
-.card-media { position: relative; background: #0a0c12; }
+.card-media { position: relative; background: #090c0a; }
 .card-media .ratio { aspect-ratio: 16/9; width: 100%; }
 .card-media iframe,
 .card-media video { width: 100%; height: 100%; border: 0; display: block; }
@@ -197,10 +187,8 @@ section { padding: 56px 0; }
 .card-tag {
   align-self: flex-start; font-size: .72rem; font-weight: 700; letter-spacing: 1px;
   text-transform: uppercase; padding: 4px 9px; border-radius: 6px;
-  background: rgba(124,92,255,.15); color: #b8a6ff; border: 1px solid rgba(124,92,255,.3);
+  background: rgba(58,208,125,.12); color: var(--accent-2); border: 1px solid rgba(58,208,125,.28);
 }
-.card-tag.audio { background: rgba(33,212,196,.13); color: #6ff0e3; border-color: rgba(33,212,196,.3); }
-.card-tag.link  { background: rgba(255,122,89,.13); color: #ffb59e; border-color: rgba(255,122,89,.3); }
 .card h3 { margin: 0; font-size: 1.15rem; }
 .card p { margin: 0; color: var(--text-dim); font-size: .94rem; }
 .card-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 6px; }
@@ -213,8 +201,8 @@ section { padding: 56px 0; }
 
 /* ---------- Contact / footer ---------- */
 .contact-card {
-  background: linear-gradient(135deg, var(--surface), var(--bg-2));
-  border: 1px solid var(--border); border-radius: 22px; padding: 44px;
+  background: var(--surface);
+  border: 1px solid var(--border); border-radius: 18px; padding: 44px;
   text-align: center;
 }
 .contact-card h2 { margin: 0 0 10px; font-size: clamp(1.6rem, 3vw, 2.2rem); }
@@ -305,7 +293,7 @@ input[type=file] { font-size: .85rem; color: var(--text-dim); }
 .gate .logo-big {
   width: 60px; height: 60px; border-radius: 16px; margin: 0 auto 18px;
   display: grid; place-items: center; font-weight: 900; font-size: 1.5rem;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0d0f16;
+  background: var(--accent); color: var(--accent-ink);
 }
 
 /* ---------- Responsive ---------- */
