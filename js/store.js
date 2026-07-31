@@ -151,30 +151,46 @@ const DEFAULT_PROJECTS = [
 
 /* ---------- Zugriffsfunktionen ---------- */
 
+/* Inhalte aus der veröffentlichten portfolio-data.json (nur online geladen).
+   Rangfolge beim Lesen: localStorage (eigene Änderungen) vor PUBLISHED
+   (das, was im Repo liegt) vor DEFAULT_* (Platzhalter im Code). */
+let PUBLISHED = null;
+
 const Store = {
+  /* Liest die neben der Website liegende portfolio-data.json ein.
+     Schlägt lokal (file://) oder ohne Datei still fehl. */
+  async loadPublished(url = 'portfolio-data.json') {
+    try {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (res.ok) PUBLISHED = await res.json();
+    } catch (e) { /* lokal oder nicht vorhanden – Platzhalter bleiben */ }
+    return PUBLISHED;
+  },
   getProjects() {
     try {
       const raw = localStorage.getItem(STORE_KEY);
       if (raw) return JSON.parse(raw);
     } catch (e) { console.warn('Projekte konnten nicht geladen werden', e); }
+    if (PUBLISHED && Array.isArray(PUBLISHED.projects)) return structuredClone(PUBLISHED.projects);
     return structuredClone(DEFAULT_PROJECTS);
   },
   saveProjects(list) {
     localStorage.setItem(STORE_KEY, JSON.stringify(list));
   },
   getAbout(lang = 'de') {
-    if (lang === 'en') return localStorage.getItem(ABOUT_EN_KEY) ?? DEFAULT_ABOUT_EN;
-    return localStorage.getItem(ABOUT_KEY) ?? DEFAULT_ABOUT;
+    if (lang === 'en') return localStorage.getItem(ABOUT_EN_KEY) ?? PUBLISHED?.about_en ?? DEFAULT_ABOUT_EN;
+    return localStorage.getItem(ABOUT_KEY) ?? PUBLISHED?.about ?? DEFAULT_ABOUT;
   },
   saveAbout(text, lang = 'de') {
     localStorage.setItem(lang === 'en' ? ABOUT_EN_KEY : ABOUT_KEY, text);
   },
   getProfile() {
+    const base = { ...DEFAULT_PROFILE, ...(PUBLISHED?.profile || {}) };
     try {
       const raw = localStorage.getItem(PROFILE_KEY);
-      if (raw) return { ...DEFAULT_PROFILE, ...JSON.parse(raw) };
+      if (raw) return { ...base, ...JSON.parse(raw) };
     } catch (e) { /* ignore */ }
-    return structuredClone(DEFAULT_PROFILE);
+    return structuredClone(base);
   },
   saveProfile(profile) {
     localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));

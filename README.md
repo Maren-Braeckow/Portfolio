@@ -29,11 +29,13 @@ Optional dazu:
 
 ## Veröffentlichen (wichtig!)
 
-Da die Seite rein statisch ist, gilt:
+Deine Änderungen im Admin-Bereich liegen zunächst **nur in dem Browser**, in dem du sie gemacht hast. So bringst du sie online zu allen Besuchern:
 
-- Änderungen im Admin-Bereich liegen **nur in dem Browser**, in dem du sie gemacht hast.
-- Zum Sichern/Übertragen: Admin → **⬇️ Exportieren** lädt `portfolio-data.json` herunter.
-- Auf einem anderen Gerät oder nach dem Zurücksetzen: Admin → **⬆️ Importieren** und die Datei wählen.
+1. Admin → **⬇️ Exportieren** lädt `portfolio-data.json` herunter.
+2. Diese Datei in den `Portfolio`-Ordner legen (neben `index.html`) und committen und pushen.
+3. Die Live-Seite liest `portfolio-data.json` beim Laden automatisch ein und zeigt deine Inhalte.
+
+Ohne diesen Schritt sehen Besucher weiter die Standard-Platzhalter aus `js/store.js`. Zum Zurückholen auf einem anderen Gerät gibt es zusätzlich Admin → **⬆️ Importieren**.
 
 ### Online stellen
 Lade den kompletten `Portfolio`-Ordner zu einem statischen Hoster hoch, z. B.:
@@ -41,10 +43,10 @@ Lade den kompletten `Portfolio`-Ordner zu einem statischen Hoster hoch, z. B.:
 - **Netlify** / **Vercel** (Ordner per Drag & Drop)
 - **itch.io** als HTML-Projekt (Ordner als ZIP hochladen, `index.html` als Startdatei)
 
-> Hinweis: Besucher sehen die **Standard-Platzhalter**, bis du deine eigenen Inhalte
-> eingibst und die exportierte `portfolio-data.json` mit hochlädst. Große Audio-/Bild-Uploads
-> lieber als URL verlinken statt als Datei einzubetten – der Browser-Speicher ist begrenzt.
+> Hinweis: Große Audio- und Bild-Uploads lieber als URL verlinken statt als Datei einzubetten,
+> der Browser-Speicher ist begrenzt.
 
-## Tipp: eigene Inhalte fest hinterlegen
-Wenn du deine echten Projekte dauerhaft als Standard willst (statt Platzhalter), kannst du die
-Listen in `js/store.js` (`DEFAULT_PROJECTS`, `DEFAULT_PROFILE`, `DEFAULT_ABOUT`) direkt anpassen.
+## Alternative: Inhalte fest im Code
+Statt über `portfolio-data.json` kannst du deine echten Projekte auch direkt in
+`js/store.js` (`DEFAULT_PROJECTS`, `DEFAULT_PROFILE`, `DEFAULT_ABOUT`) eintragen. Rangfolge beim
+Anzeigen ist localStorage vor `portfolio-data.json` vor den `DEFAULT_*`-Platzhaltern.

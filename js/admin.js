@@ -4,7 +4,8 @@
 
 let projects = [];
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await Store.loadPublished(); // veröffentlichte Inhalte als Ausgangsbasis laden
   projects = Store.getProjects();
   loadProfileForm();
   renderList();

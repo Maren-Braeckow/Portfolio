@@ -4,10 +4,11 @@
 
 let currentFilter = 'all';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   applyEnvVisibility(); // Admin-Elemente nur lokal zeigen
   applyI18n();          // feste UI-Texte übersetzen
   setupLangToggle();
+  await Store.loadPublished(); // veröffentlichte Inhalte aus portfolio-data.json
   renderAll();
   setupFilters();
   document.getElementById('year').textContent = new Date().getFullYear();
