@@ -25,8 +25,8 @@ const PROFILE_KEY  = 'portfolio.profile.v1';
 const DEFAULT_PROFILE = {
   name: 'Maren Bräckow',
   role: 'Game Engineering · 8. Semester',
-  tagline: 'Ich entwickle Spiele und arbeite an Sound, Gameplay und Interaktion. Hier sammle ich meine persönlichen Projekte, von kleinen Experimenten bis zu größeren Produktionen.',
-  tagline_en: 'I develop games and work on sound, gameplay and interaction. Here I collect my personal projects, from small experiments to bigger productions.',
+  tagline: 'Mein Schwerpunkt liegt auf Sound und Musik, ich programmiere und gestalte aber genauso gern. Hier sammle ich meine persönlichen Projekte, von kleinen Experimenten bis zu größeren Produktionen.',
+  tagline_en: 'My focus is on sound and music, but I also love programming and design. Here I collect my personal projects, from small experiments to bigger productions.',
   initials: 'MB',
   photoUrl: '',              // leer = Platzhalter
   email: 'maren.braeckow@web.de',
@@ -35,24 +35,24 @@ const DEFAULT_PROFILE = {
 };
 
 const DEFAULT_ABOUT =
-  'Hi! Ich bin Studentin im Studiengang Game Engineering im 8. Semester und ' +
-  'begeistere mich für Spielentwicklung, von Gameplay-Programmierung über ' +
-  'Audio- und Sound-Design bis zu Level- und Interaktionsdesign.\n\n' +
+  'Hi! Ich bin Studentin im Studiengang Game Engineering im 8. Semester. ' +
+  'Mein Schwerpunkt liegt auf Sound und Musik. Ich komponiere, mache Sounddesign ' +
+  'und arbeite an der Audio-Umsetzung in Spielen. Genauso gern programmiere und ' +
+  'gestalte ich, von Gameplay über Level bis zur Interaktion.\n\n' +
   'Auf dieser Seite sammle ich meine persönlichen Projekte. Dazu gehören Gameplay-Videos, ' +
   'Audio-Arbeiten und spielbare Prototypen auf itch.io. Manche entstehen im Studium, ' +
   'andere in meiner Freizeit. Ich arbeite an meiner Bachelorarbeit über ' +
-  'barrierefreies Game Design.\n\n' +
-  '(Diesen Text kannst du jederzeit im Admin-Bereich anpassen.)';
+  'barrierefreies Game Design.';
 
 const DEFAULT_ABOUT_EN =
-  'Hi! I\'m a Game Engineering student in my 8th semester and I\'m ' +
-  'passionate about game development, from gameplay programming to audio and ' +
-  'sound design and level and interaction design.\n\n' +
+  'Hi! I\'m a Game Engineering student in my 8th semester. ' +
+  'My focus is on sound and music. I compose, do sound design and work on ' +
+  'the audio implementation in games. I also love programming and design, ' +
+  'from gameplay to levels and interaction.\n\n' +
   'On this page I collect my personal projects. These include gameplay videos, ' +
   'audio work and playable prototypes on itch.io. Some are created during my studies, ' +
   'others in my free time. I\'m working on my bachelor\'s thesis about ' +
-  'accessible game design.\n\n' +
-  '(You can edit this text anytime in the admin area.)';
+  'accessible game design.';
 
 const DEFAULT_PROJECTS = [
   {
